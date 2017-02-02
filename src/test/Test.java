@@ -19,6 +19,7 @@ public class Test {
             reverseString += s.charAt(i);
         }
         System.out.println(reverseString);
+
         B cb = new B();
         cb.addAll(3);
         System.out.println(cb.getCnt());
@@ -31,12 +32,14 @@ public class Test {
 
 class A {
     public void add(int i) {
+        System.out.println(this+" A.add="+i);
     }
 
     public void addAll(int t) {
-        for (int i = 0; i < t; i++) {
+        System.out.println(this+" A.addAll="+t);
+        //for (int i = 0; i < t; i++) {
             add(1);
-        }
+       // }
     }
 }
 
@@ -45,12 +48,14 @@ class B extends A {
 
     @Override
     public void add(int t) {
+        System.out.println(this+" B.add="+t);
         cnt = cnt + t;
         super.add(t);
     }
 
     @Override
     public void addAll(int t) {
+        System.out.println(this+" B.addAll="+t);
         cnt = cnt + t;
         super.addAll(t);
     }
