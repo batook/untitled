@@ -19,7 +19,7 @@ public class Test {
             reverseString += s.charAt(i);
         }
         System.out.println(reverseString);
-
+        System.out.println(new StringBuilder("abcd").reverse());
         B cb = new B();
         cb.addAll(3);
         System.out.println(cb.getCnt());
